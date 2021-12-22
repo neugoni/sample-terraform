@@ -3,11 +3,9 @@ resource "aws_key_pair" "key_pair" {
   public_key = var.public_key
 }
 
-resource "aws_default_vpc" "default" {}
-
 resource "aws_security_group" "allow_ssh" {
   name   = "sg_ssh"
-  vpc_id = aws_default_vpc.default.id
+  vpc_id = data.aws_vpc.vpc.id
 
   ingress {
     from_port   = 22
