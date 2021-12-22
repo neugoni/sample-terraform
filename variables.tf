@@ -5,7 +5,7 @@ variable "aws_access_key" {
 
 variable "aws_secret_key" {
   type        = string
-  description = "AWS secret key that should bne stored in CI/CD secret manager."
+  description = "AWS secret key that should be stored in CI/CD secret manager."
 }
 
 variable "key_name" {
